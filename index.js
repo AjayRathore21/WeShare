@@ -1,9 +1,21 @@
 const express = require('express');
 const app = express();
 const port = 8000;
+const db = require('./config/mongoose');
+const cookieParser = require('cookie-parser')
 const expressLayouts = require('express-ejs-layouts');
 
+app.use(express.urlencoded());
+app.use(cookieParser());
+
+
+app.use(express.static('./assets'));  // this tell app in which folder it will find static file
+
 app.use(expressLayouts);
+
+//extrect style and script from subpages into the layout
+app.set('layout extractStyles',true);     // write extract not extrect....suar
+app.set('layout extractScripts',true);
 
 // use express router
 app.use('/', require('./routes'));
