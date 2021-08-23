@@ -10,6 +10,9 @@ module.exports.profile = function(req, res){
 
 // render the signup page
 module.exports.signUp = function(req,res){
+    if(req.isAuthenticated()){
+      return  res.redirect('/users/profile');
+    }
     res.render('user_sign_up',{
         title:"Codeial || sign-Up"
     })
@@ -18,6 +21,9 @@ module.exports.signUp = function(req,res){
 
 // render the signin page 
 module.exports.signIn = function(req,res){
+    if(req.isAuthenticated()){
+      return  res.redirect('/users/profile'); 
+    }
     res.render('user_sign_in',{
         title:"Codeial || sign-Ip"
     })
@@ -51,8 +57,13 @@ module.exports.create = function(req,res){
 // creating session using signin for the user
 module.exports.createSession = function(req,res){
 
-    User.findOne({email:req.body.email,})
-
+   return res.redirect('/');
 
     
+}
+
+// deleting the session-cookie for sign out
+module.exports.destroySession = function(req,res){   // #### req.logout hotaa h keep it in mind not res.logout()
+    req.logout();  //passport.js is having this function  
+    return res.redirect('/');
 }
