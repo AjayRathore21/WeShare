@@ -1,5 +1,5 @@
 #home-content{
-    height: 480px;
-    border: 2px dashed grey;
+    height: auto;
+    
     box-sizing: border-box;
 }
