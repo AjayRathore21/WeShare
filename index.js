@@ -14,6 +14,18 @@ const MongoDBStore = require('connect-mongodb-session')(session);  // connect-mo
 //const MongoStore = require('connect-mongo')(session);--- this is for older versions
 
 
+// for sass file work 
+const sassMiddleware = require('node-sass-middleware')
+app.use(sassMiddleware({
+    src:'./assets/sass',
+    dest:'./assets/css',
+    debug:true,
+    outputStyle:"expanded",
+    prefix:'/css',
+
+}))
+
+
 const expressLayouts = require('express-ejs-layouts');
 
 app.use(express.urlencoded());

@@ -1,4 +1,5 @@
 #home-content{
-    height: 60%;
+    height: 480px;
     border: 2px dashed grey;
+    box-sizing: border-box;
 }
