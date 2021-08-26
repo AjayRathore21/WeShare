@@ -68,7 +68,7 @@ app.use(session({
     resave:false,
     cookie:{
         maxAge:(1000*60*100), // in miliseconds
-    },
+    }, 
     store: store,
     /*new mongoose(
         {
@@ -97,5 +97,5 @@ app.listen(port, function(err){
         console.log(`Error in running the server: ${err}`);
     }
 
-    console.log(`Server is running on port: ${port}`);
+    console.log(`Server is running on port: ${port}`);  
 });

@@ -3,7 +3,8 @@ body {
 }
 
 body #layout-main {
-  height: 480px;
+  height: auto;
+  min-height: 480px;
   background-color: bisque;
   border: 2px dashed grey;
 }
