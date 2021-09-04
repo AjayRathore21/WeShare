@@ -10,7 +10,9 @@
                 data:newPostForm.serialize(),  //makes json file of content in form
                 success:function(data){
                     let newPost = new newPostDom(data.data.post);
-                    $('#posts-list-container>ul').prepend(newPost);
+                    $('#posts-list-container>ul').prepend(newPost);  //appending to the list, prepend means at first position
+                    deletePost($(` .delete-post-button`,newPost))
+            
                 },
                 error:function(error){
                     console.log(error.responseText);
@@ -27,7 +29,7 @@
                     
         <p> 
          <small>
-             <a href="/posts/destroy/${post.id}">delete</a><br>
+             <a class="delete-post-button" href="/posts/destroy/${post._id}">delete</a><br>
          </small>
     
          ${post.content}
@@ -56,5 +58,23 @@
     }
 
 
+    //method to delete post using ajex
+    let deletePost = function(deleteLink){
+        $(deleteLink).click(function(e){
+            e.preventDefault();
+            console.log('@@@@@@@');
+
+            $.ajax({
+                type:'get',
+                url:$(deleteLink).prop('href'),
+                success:function(data){
+                    $(`#post-${data.data.post_id}`).remove();
+
+                },error:function(error){
+                    console.log(error);
+                }
+            });
+        });
+    }
     createPost();
 }

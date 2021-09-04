@@ -3,11 +3,14 @@
             Codeial / Profile Page
         </h1>
 
+    <img src="<%=user.avatar %>" alt="<%= user.name%>" width="100px">
+
 <% if(user.id==profile_user.id){%>
     <!-- if user matches to his own profile, then only the form should visible -->
-    <form action="/users/update/<%= profile_user.id%>" method="POST">
+    <form action="/users/update/<%= profile_user.id%>" method="POST" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="your Name..." value="<%= profile_user.name%>" required> <br>
     <input type="email" name="email" placeholder="your Email..." value="<%= profile_user.email%>" required> <br>
+    <input type="file" name="avatar" placeholder="Profile picture">
     <button>update</button>
 </form>
     <%}else{%>
