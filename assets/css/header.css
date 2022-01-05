@@ -1,6 +1,6 @@
 header {
   background-color: steelblue;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   color: whitesmoke;
@@ -12,6 +12,8 @@ header {
 
 header a {
   text-decoration: none;
+  font-size: 40px;
+  font-weight:800;
 }
 
 header #active-status {
@@ -23,7 +25,8 @@ header li {
   display: inline;
   list-style: none;
   margin-left: none;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 600px;
 }
 
 header a {

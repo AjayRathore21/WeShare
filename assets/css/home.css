@@ -1,15 +1,48 @@
 #home-container {
   display: flex;
+  justify-content: space-between;
+  background-image: url('../images/gju.png');
+  background-size:  40% 500px;
+  background-repeat: no-repeat;
+  background-position: 600px 100px;
+  border: 2px solid red ;
 }
 
 #home-container #feed-posts {
   width: 70%;
+  height: 700px;
   padding: 10px;
 }
 
 #home-container #user-friends {
-  width: 30%;
+  width: 250px;
   padding: 10px;
-  border-left: 1px solid lightgrey;
-  height: 70%;
+  /* border: 5px solid lightgrey; */
+  height:auto;
+}
+
+
+#user-friends {
+
+  width: 100px;
+  height: auto;
+  border: 1px solid lightgrey;
+
+}
+
+textarea::-webkit-input-placeholder {
+  font-size: 30px;
+}
+input[type=submit] {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+input[type=text]{
+  width: 250px;
+  height: 40px;
+}
+input::-webkit-input-placeholder {
+  font-size: 25px;
+  
 }
