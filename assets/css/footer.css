@@ -1,16 +1,12 @@
 footer {
-  height: 100px;
+  height: 70px;
   background-color: steelblue;
   color: whitesmoke;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
   padding: 0px 10px;
   align-items: center;
-  padding-left: 20px;
-
   display: flex;
-
-  justify-content: space-between;
 }
 
 footer a {
@@ -18,17 +14,12 @@ footer a {
   color: inherit;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 20px;
 }
- #footer-links {
-  margin-right: 10px;
+
+footer #footer-links {
+  margin-left: 20px;
   display: flex;
   width: 100px;
   flex-wrap: wrap;
-  font-size: 40px;
 }
-/* footer-nav{
-  font-size: 30px;
-  font-weight: 400;
-
-} */
