@@ -1,5 +1,10 @@
 #home-container {
   display: flex;
+  min-height: 600px;
+  background-image: url("../images/gju.png");
+  background-position: 500px 0px;
+  background-repeat: no-repeat;
+  background-size: 500px;
 }
 
 #home-container #feed-posts {
@@ -10,6 +15,12 @@
 #home-container #user-friends {
   width: 30%;
   padding: 10px;
-  border-left: 1px solid lightgrey;
+  border-left: 3px solid lightgrey;
   height: 70%;
+}
+input{
+  font-size: 20px;
+}
+textarea::-webkit-input-placeholder{
+  font-size: 25px;
 }
