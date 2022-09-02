@@ -1,6 +1,6 @@
 # WeShare a socail media website
 
-# The ToDo app uses the following technologies and javascript libraries:
+# The WeShare WebApp uses the following technologies and javascript libraries:
 * MongoDB
 * Express.js
 * Node.js
